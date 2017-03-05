@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>peipei</title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+</head>
+<body>
+    <div id="test4"></div>
+    <script type="text/babel">
+    var HelloMessage=React.createClass({
+        render: function() {
+            return <h1>{this.props.name}</h1>;  //要加标签 因为render()的参数第一个为element（HTML顶层标签或者createClass类型的标签）；第二个参数为container；第三个可以为返回值
+        }
+    }
+    );
+    ReactDOM.render(
+        <HelloMessage name="jonh" />,
+        document.getElementById("test4")
+    );
+    </script>
+</body>
+</html>

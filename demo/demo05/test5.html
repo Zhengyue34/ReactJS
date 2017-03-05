@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pei</title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+</head>
+<body>
+<div id="test5"></div>
+<script type="text/babel">
+    var NodeList = React.createClass({
+        render: function(){
+            return (
+            <ol>
+            {
+                React.Children.map(this.props.children,function(child){
+                        return <li> {child} </li>
+                    })//分号不能乱加，在函数结束的位置才考虑要不要加分号
+            }
+            </ol>
+    )
+        }
+    })
+    ReactDOM.render(
+            <NodeList>
+                <span>zhengyue</span>
+                <span>wangpei</span>
+            </NodeList>,
+            document.getElementById("test5")
+    )
+</script>
+
+</body>
+</html>

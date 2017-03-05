@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>I am Yue</title>
+        <script src="../build/react.js"></script>
+        <script src="../build/react-dom.js"></script>
+        <script src="../build/browser.min.js"></script>
+    </head>
+    <body>
+        <div id="test2"></div>
+        <script type="text/babel">
+            var names=['Zhengyue\n','wang\n','lu'];
+            ReactDOM.render(
+            <p>
+            {names.map(function (name) {
+                return name
+            })
+            }
+            </p>,
+                document.getElementById("test2")
+            );
+        </script>
+    </body>
+    </html>
